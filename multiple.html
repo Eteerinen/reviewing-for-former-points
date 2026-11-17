@@ -3,23 +3,32 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<style></style>
 	</head>
 	<body>
 		<input type="number" id="input_box"/>
 		<button id="btn_multiple">Multiply</button>
-		<div id="div_form"></div>
+		<h2><div id="div_form"></div></h2>
 		<script>
 			const inputBox = document.getElementById("input_box");
 			const button = document.getElementById("btn_multiple");
 			const divBox = document.getElementById("div_form");
 			button.addEventListener("click", function() {
+				divBox.innerHTML = "";
 				let maxNumber = inputBox.value;
 				if(maxNumber >= 1 && maxNumber <= 10){
 					for (let i = 1; i <= maxNumber; i++) {
-						console.log(i);
+						for (let j = 1; j <= i; j++) {
+							const block = document.createElement("h2");
+							block.textContent = j + "*" + i + " ";
+							// console.log(j + "*" + i);
+							const paragraph = document.createElement("p");
+							divBox.appendChild(block);
+							divBox.appendChild(paragraph);
+						}
 					}
 				}else{
-					console.log("Invalid Input, Try Again!");
+					divBox.textContent = "Invalid Input, Try Again!";
 				}
 			});
 		</script>
