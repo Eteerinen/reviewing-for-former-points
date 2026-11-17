@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="number" id="input_box"/>
+		<button id="btn_multiple">Multiply</button>
+		<div id="div_form"></div>
+		<script>
+			const inputBox = document.getElementById("input_box");
+			const button = document.getElementById("btn_multiple");
+			const divBox = document.getElementById("div_form");
+			button.addEventListener("click", function() {
+				console.log(inputBox.value);
+			});
+		</script>
+	</body>
+</html>
