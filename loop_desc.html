@@ -5,7 +5,6 @@
 		<title></title>
 	</head>
 	<body>
-		<p id="p_number"></p>
 		<button id="btn_showDesc">Click</button>
 		<script>
 			let number = 11;
@@ -15,14 +14,12 @@
 				}
 				return number;
 			}
-			const p_num = document.getElementById("p_number");
 			const btn = document.getElementById("btn_showDesc");
 			btn.addEventListener("click", function() {
-				// const new_p = document.createElement("p");
-				// new_p.textContent = "Hello";
-				// document.body.appendChild(new_p);
+				const new_p = document.createElement("p");
 				showDesc();
-				p_num.textContent = number;
+				new_p.textContent = number;
+				document.body.appendChild(new_p);
 			});
 		</script>
 	</body>
