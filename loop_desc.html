@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p_number"></p>
+		<button id="btn_showDesc">Click</button>
+		<script>
+			let number = 11;
+			function showDesc () {
+				if (number > 0) {
+					number--;
+				}
+				return number;
+			}
+			const p_num = document.getElementById("p_number");
+			const btn = document.getElementById("btn_showDesc");
+			btn.addEventListener("click", function() {
+				// const new_p = document.createElement("p");
+				// new_p.textContent = "Hello";
+				// document.body.appendChild(new_p);
+				showDesc();
+				p_num.textContent = number;
+			});
+		</script>
+	</body>
+</html>
