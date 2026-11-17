@@ -13,7 +13,14 @@
 			const button = document.getElementById("btn_multiple");
 			const divBox = document.getElementById("div_form");
 			button.addEventListener("click", function() {
-				console.log(inputBox.value);
+				let maxNumber = inputBox.value;
+				if(maxNumber >= 1 && maxNumber <= 10){
+					for (let i = 1; i <= maxNumber; i++) {
+						console.log(i);
+					}
+				}else{
+					console.log("Invalid Input, Try Again!");
+				}
 			});
 		</script>
 	</body>
