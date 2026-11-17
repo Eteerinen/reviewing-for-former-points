@@ -2,24 +2,18 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>Loop Desc</title>
 	</head>
 	<body>
 		<button id="btn_showDesc">Click</button>
 		<script>
-			let number = 11;
-			function showDesc () {
-				if (number > 0) {
-					number--;
-				}
-				return number;
-			}
 			const btn = document.getElementById("btn_showDesc");
 			btn.addEventListener("click", function() {
-				const new_p = document.createElement("p");
-				showDesc();
-				new_p.textContent = number;
-				document.body.appendChild(new_p);
+				for (let i = 10; i > 0; i--) {
+					const new_p = document.createElement("p");
+					new_p.textContent = i;
+					document.body.appendChild(new_p);
+				}
 			});
 		</script>
 	</body>
