@@ -11,6 +11,7 @@
 			const btn = document.getElementById("btn_showDesc");
 			const container = document.getElementById("div_container")
 			btn.addEventListener("click", function() {
+				container.innerHTML = "";	// Without this, list will be shown twice if clicking again
 				for (let i = 10; i >= 0; i--) {
 					const new_p = document.createElement("p");
 					if (i === 0) {
