@@ -5,14 +5,20 @@
 		<title>Loop Desc</title>
 	</head>
 	<body>
+		<div id="div_container"></div>
 		<button id="btn_showDesc">Click</button>
 		<script>
 			const btn = document.getElementById("btn_showDesc");
+			const container = document.getElementById("div_container")
 			btn.addEventListener("click", function() {
-				for (let i = 10; i > 0; i--) {
+				for (let i = 10; i >= 0; i--) {
 					const new_p = document.createElement("p");
-					new_p.textContent = i;
-					document.body.appendChild(new_p);
+					if (i === 0) {
+						new_p.textContent = "Liftoff!";
+					}else{
+						new_p.textContent = i;
+					}
+					container.appendChild(new_p);
 				}
 			});
 		</script>
